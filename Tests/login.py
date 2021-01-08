@@ -6,8 +6,6 @@ import os
 sys.path.append(os.path.join(os.path.dirname(__file__), "..", ".."))
 from serasa.Pages.indexPage import IndexPage
 from serasa.Pages.loginPage import LoginPage
-#from SERASA.Pages.indexPage import IndexPage
-#from SERASA.Pages.loginPage import LoginPage
 import HtmlTestRunner
 
 

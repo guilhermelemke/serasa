@@ -1,21 +1,26 @@
 from behave import given, when, then
-from selenium.webdriver import Firefox
+from Pages import indexPage, loginPage, accountPage
 
-@given('the user is on Serasa homepage')
-def go_to_page(context):
-    context.browser = Firefox()
-    context.browser.get('https://selenium.dunossauro.live/todo_list.html')
+website = {
+    'homepage': 'https://www.serasaconsumidor.com.br'
+}
+
+@given('the user is on Serasa {homepage}')
+def go_to_page(context, homepage):
+    context.homepage = indexPage(context.browser, homepage)
+    context.homepage.open()
 
 @when('the user clicks on ENTRAR')
 def click_enter(context):
-    context.browser.find_element_by_id('todo-name')
-    context.browser.find_element_by_id('todo-desc')
-    context.browser.find_element_by_id('todo-submit')
+    context.homepage.click_enter()
 
 @And('the user clicks on Confirmar')
 def click_confirm(context):
-    ...
+    context.homepage.click_confirm()
 
-@Then('the message '{pilha}' should be displayed')
-def assert_message(context, pilha):
-    ...
+@Then('the message {element} should be displayed')
+def assert_message(context, element):
+    pass
+    #element = element.lower().replace(' ', '_')
+    #page_element = getattr(context.page, element)
+    #assert 'element' == loginPage.empty_cpf_message

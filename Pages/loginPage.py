@@ -7,7 +7,7 @@ class LoginPage():
         
         self.cpf_field_class_name = Locators.cpf_field_class_name
         self.confirm_button_css_selector = Locators.confirm_button_css_selector
-        self.cpf_message_class = '_1fpPRNS1'
+        self.cpf_message_class = Locators.cpf_message_class
 
     def enter_cpf(self, cpf):
         self.browser.find_element_by_class_name(Locators.cpf_field_class_name).clear()
