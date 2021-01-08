@@ -4,8 +4,8 @@ import unittest
 import sys
 import os
 sys.path.append(os.path.join(os.path.dirname(__file__), "..", ".."))
-from serasa.Pages.indexPage import IndexPage
-from serasa.Pages.loginPage import LoginPage
+from serasa.features.steps.Pages.indexPage import IndexPage
+from serasa.features.steps.Pages.loginPage import LoginPage
 import HtmlTestRunner
 
 
@@ -21,7 +21,7 @@ class LoginTest(unittest.TestCase):
 
         browser.get('https://www.serasaconsumidor.com.br')
 
-        index_page = IndexPage(browser)
+        #index_page = IndexPage(browser)
         index_page.click_enter()
 
         login = LoginPage(browser)

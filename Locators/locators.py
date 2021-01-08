@@ -9,4 +9,3 @@ class Locators():
     cpf_message_class = '_1fpPRNS1'
 
     # Create account objects
-    
