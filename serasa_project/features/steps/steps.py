@@ -2,7 +2,7 @@ from selenium.webdriver import Firefox
 from behave import given, when, then
 from Pages.indexPage import IndexPage
 from Pages.loginPage import LoginPage
-#from Pages.accountPage import AccountPage
+from Pages.accountPage import AccountPage
 
 web = {
     'homepage': 'https://www.serasaconsumidor.com.br'
@@ -24,6 +24,11 @@ def click_confirm(context):
     context.homepage = LoginPage(browser)
     context.homepage.click_confirm()
 
-@Then('the message {element} should be displayed')
+@then('the message {element} should be displayed')
 def assert_message(context, element):
-    pass
+    assert element == context.password_requirements_message()
+
+@when('the user informs the CPF {cpf}')
+def enter_cpf(context, cpf):
+    context.homepage = LoginPage(browser)
+    context.homepage.enter_cpf(cpf)

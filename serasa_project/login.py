@@ -4,10 +4,9 @@ import unittest
 import sys
 import os
 sys.path.append(os.path.join(os.path.dirname(__file__), "...", "..."))
-#from serasa.serasa_project.Pages.indexPage import IndexPage
-#from serasa.serasa_project.Pages.loginPage import LoginPage
 from Pages.indexPage import IndexPage
 from Pages.loginPage import LoginPage
+from Pages.accountPage import AccountPage
 import HtmlTestRunner
 
 
@@ -27,16 +26,11 @@ class LoginTest(unittest.TestCase):
         index_page.click_enter()
 
         login = LoginPage(browser)
-        #sleep(2)
         login.click_confirm()
-        #sleep(2)
         login.enter_cpf('')
-        #sleep(2)
         login.click_confirm()
-        #sleep(2)
         message = login.emty_cpf_message()
         self.assertEqual(message, "Por favor preencha seu CPF.")
-        #sleep(2)
 
     def test_02_login_invalid_cpf(self):
         browser = self.browser
@@ -47,16 +41,11 @@ class LoginTest(unittest.TestCase):
         index_page.click_enter()
 
         login = LoginPage(browser)
-        #sleep(2)
         login.click_confirm()
-        #sleep(2)
         login.enter_cpf('12345678900')
-        #sleep(2)
         login.click_confirm()
-        #sleep(2)
         message = login.invalid_cpf_message()
         self.assertEqual(message, "Você precisa informar um CPF válido.")
-        #sleep(2)
 
     def test_03_login_valid_cpf(self):
         browser = self.browser
@@ -67,16 +56,12 @@ class LoginTest(unittest.TestCase):
         index_page.click_enter()
 
         login = LoginPage(browser)
-        #sleep(2)
         login.click_confirm()
-        #sleep(2)
         login.enter_cpf('04603676093')
-        #sleep(2)
-        login.click_confirm() 
-        #sleep(2)
-        #message = login.invalid_cpf_message()
-        #self.assertEqual(message, "Você precisa informar um CPF válido.")
-        #sleep(2)
+        login.click_confirm()
+        signup = AccountPage(browser)
+        message = signup.password_requirements_message()
+        self.assertEqual(message, "Sua senha não pode conter: seu nome, sobrenome, cpf, números sequenciais ou menos de 8 caracteres.")
 
     @classmethod
     def tearDownClass(self):
