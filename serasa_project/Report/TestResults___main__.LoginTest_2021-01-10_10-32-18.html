@@ -11,9 +11,9 @@
         <div class="row">
             <div class="col-xs-12">
                 <h2 class="text-capitalize">Unittest Results</h2>
-                <p class='attribute'><strong>Start Time: </strong>2021-01-08 17:51:34</p>
-                <p class='attribute'><strong>Duration: </strong>11.11 s</p>
-                <p class='attribute'><strong>Summary: </strong>Total: 3, Pass: 3</p>
+                <p class='attribute'><strong>Start Time: </strong>2021-01-10 10:32:18</p>
+                <p class='attribute'><strong>Duration: </strong>13.28 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 3, Pass: 2, Fail: 1</p>
             </div>
         </div>
         <div class="row">
@@ -43,17 +43,28 @@
                             <td class="col-xs-1">
                             </td>
                         </tr>
-                        <tr class='success'>
+                        <tr class='danger'>
                             <td class="col-xs-10">test_03_login_valid_cpf</td>
                             <td class="col-xs-1">
-                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
                             </td>
                             <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">AssertionError: '' != 'Sua senha não pode conter: seu nome, sobr[53 chars]res.'
++ Sua senha não pode conter: seu nome, sobrenome, cpf, números sequenciais ou menos de 8 caracteres.</p><p style="color:maroon;">Traceback (most recent call last):
+  File "login.py", line 64, in test_03_login_valid_cpf
+    self.assertEqual(message, "Sua senha não pode conter: seu nome, sobrenome, cpf, números sequenciais ou menos de 8 caracteres.")
+AssertionError: '' != 'Sua senha não pode conter: seu nome, sobr[53 chars]res.'
++ Sua senha não pode conter: seu nome, sobrenome, cpf, números sequenciais ou menos de 8 caracteres.
+</p>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="3">
-                                Total: 3, Pass: 3 -- Duration: 11.11 s
+                                Total: 3, Pass: 2, Fail: 1 -- Duration: 13.28 s
                             </td>
                         </tr>
                     </tbody>

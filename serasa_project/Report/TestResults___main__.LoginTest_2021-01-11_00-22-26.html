@@ -11,9 +11,9 @@
         <div class="row">
             <div class="col-xs-12">
                 <h2 class="text-capitalize">Unittest Results</h2>
-                <p class='attribute'><strong>Start Time: </strong>2021-01-08 17:37:47</p>
-                <p class='attribute'><strong>Duration: </strong>22.86 s</p>
-                <p class='attribute'><strong>Summary: </strong>Total: 3, Pass: 2, Error: 1</p>
+                <p class='attribute'><strong>Start Time: </strong>2021-01-11 00:22:26</p>
+                <p class='attribute'><strong>Duration: </strong>16.70 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 3, Pass: 3</p>
             </div>
         </div>
         <div class="row">
@@ -43,38 +43,17 @@
                             <td class="col-xs-1">
                             </td>
                         </tr>
-                        <tr class='warning'>
+                        <tr class='success'>
                             <td class="col-xs-10">test_03_login_valid_cpf</td>
                             <td class="col-xs-1">
-                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
                             </td>
                             <td class="col-xs-1">
-                                <button class="btn btn-default btn-xs">View</button>
-                            </td>
-                        </tr>
-                        <tr style="display:none;">
-                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">NoSuchElementException: Message: Unable to locate element: ._1fpPRNS1
-</p><p style="color:maroon;">Traceback (most recent call last):
-  File "/Users/guilhermelemke/Documents/Python/serasa/Tests/login.py", line 74, in test_03_login_valid_cpf
-    message = login.invalid_cpf_message()
-  File "/Users/guilhermelemke/Documents/Python/serasa/Tests/../../serasa/Pages/loginPage.py", line 24, in invalid_cpf_message
-    msg = self.browser.find_element_by_class_name(self.cpf_message_class).text
-  File "/Users/guilhermelemke/Documents/Python/serasa/venv/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 564, in find_element_by_class_name
-    return self.find_element(by=By.CLASS_NAME, value=name)
-  File "/Users/guilhermelemke/Documents/Python/serasa/venv/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 976, in find_element
-    return self.execute(Command.FIND_ELEMENT, {
-  File "/Users/guilhermelemke/Documents/Python/serasa/venv/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "/Users/guilhermelemke/Documents/Python/serasa/venv/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchElementException: Message: Unable to locate element: ._1fpPRNS1
-
-</p>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="3">
-                                Total: 3, Pass: 2, Error: 1 -- Duration: 22.86 s
+                                Total: 3, Pass: 3 -- Duration: 16.70 s
                             </td>
                         </tr>
                     </tbody>

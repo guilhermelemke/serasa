@@ -1,4 +1,5 @@
-from serasa.Locators.locators import Locators
+from Locators.locators import Locators
+
 
 class LoginPage():
 
@@ -16,10 +17,6 @@ class LoginPage():
     def click_confirm(self):
         self.browser.find_element_by_css_selector(Locators.confirm_button_css_selector).click()
 
-    def emty_cpf_message(self):
-        msg = self.browser.find_element_by_class_name(self.cpf_message_class).text
-        return msg
-
-    def invalid_cpf_message(self):
+    def error_cpf_message(self):
         msg = self.browser.find_element_by_class_name(self.cpf_message_class).text
         return msg

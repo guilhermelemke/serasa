@@ -9,4 +9,4 @@ class Locators():
     cpf_message_class = '_1fpPRNS1'
 
     # Create account objects
-    
+    password_message_class = '//*[@id="sign_up_form"]/div[6]/div/div[2]/div/div/p'
