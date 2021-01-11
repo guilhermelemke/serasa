@@ -29,7 +29,7 @@ class LoginTest(unittest.TestCase):
         login.click_confirm()
         login.enter_cpf('')
         login.click_confirm()
-        message = login.emty_cpf_message()
+        message = login.error_cpf_message()
         self.assertEqual(message, "Por favor preencha seu CPF.")
 
     def test_02_login_invalid_cpf(self):
@@ -44,7 +44,7 @@ class LoginTest(unittest.TestCase):
         login.click_confirm()
         login.enter_cpf('12345678900')
         login.click_confirm()
-        message = login.invalid_cpf_message()
+        message = login.error_cpf_message()
         self.assertEqual(message, "Você precisa informar um CPF válido.")
 
     def test_03_login_valid_cpf(self):
