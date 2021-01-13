@@ -7,6 +7,12 @@ Testar a funcionalidade de login do site nos seguintes cenários:
 * Login com CPF inválido e assert da mensagem de retorno
 * Login com CPF válido e assert da mensagem de requisitos de senha
 
+## Pré requisitos para rodar o projeto:
+
+* geckodriver versão 0.28.0 : incluso no projeto
+* geckodriver deverá ser rodado pelo menos uma vez na máquina
+* Firefox browser: versão 60 ou superior
+
 ## Como rodar o projeto:
 
 * Clone esse repositório:  
@@ -16,8 +22,9 @@ Testar a funcionalidade de login do site nos seguintes cenários:
 ```python3 -m venv venv ```
 * Ative o virtualenv:  
 ```source venv/bin/activate ```  
-* Instale as dependências:   
+* Instale as dependências, pip - windows ou pip3 linux/mac:   
 ```pip install -r requirements.txt ```
+```pip3 install -r requirements.txt ```
 * Execuçao dos testes com unittest:   
 ```cd serasa_project ```
 ```python3 login.py ```
